@@ -19,16 +19,16 @@ For quantifying variables derived from spatial analyses when the extent of suita
 # 5. RF_high_medium_first_last.R
 Random forest model for the prediction of extinction risk transtions in terrestrial mammals. Here we show the relative variable importance of predictors (Fig. 2) and partial dependence plots of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition (Fig. 3). Requires data_high_medium_first_last.txt as input data.
 
-# 6. RF_quality_matrix
+# 6. RF_quality_matrix.R
 Separate random forest models for the prediction of extinction risk transitions for species with low-quality matrices and high-quality matrices. Here, we show the relative variable importance in the model for species with low-quility matrices (Fig. 4a) and in the model for species with high-quality matrices (fig. 4b). Requires data_high_medium_first_last.txt as input data. 
 
-# 7. Wilcox_test_and_cohens_d_quality_matrix
+# 7. Wilcox_test_and_cohens_d_quality_matrix.R
 Runs the Wilcoxon rank sum tests to test for statistical differences in the degree of fragmentation and the degree of patch isolation between extinction risk transitions and calculates effect sizes based Cohen's d statistics to determine the effect size of the degree of fragmentation and the degree of patch isolation between extinction risk transitions. Requires data_high_medium_first_last.txt as input data.
 
-# 8. Extract_IUCN_categories
+# 8. Extract_IUCN_categories.py
 Extracts IUCN categories from a table. Requires transposed_and_filtered_with_genuine_changes.xlsx (output from 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py) as input data.
 
-# 9. Transitions_matrix_of_extinction_risk_categories
+# 9. Transitions_matrix_of_extinction_risk_categories.R
 Figure showing the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires first_last.txt as input data.
 
 # 10. High_HFP_extent_medium_unsuitable_combined.py
