@@ -31,7 +31,7 @@ Extracts IUCN categories from a table. Requires transposed_and_filtered_with_gen
 # 9. Transitions_matrix_of_extinction_risk_categories
 Figure showing the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires first_last.txt as input data.
 
-# 10. High_HFP_extent_.py
-For quantifying variables derived from spatial analyses when the extent of suitable habitat is represented by high and medium habitat suitability combined and the extent of the matrix by 'unsuitable' habitat alone. Requieres habitat suitabilty models (available upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), hfp2000_merisINT_3_or_above.tif, hfp2013_merisINT_3_or_above.tif, and WorldMollweide.prj as input data. 
+# 10. High_HFP_extent_medium_unsuitable_combined.py
+For quantifying variables derived from spatial analyses when the extent of suitable habitat is represented by high habitat suitability and the extent of the matrix by 'unsuitable' habitat and medium habitat suitability combined . Requieres habitat suitabilty models (available upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), hfp2000_merisINT_3_or_above.tif, hfp2013_merisINT_3_or_above.tif, and WorldMollweide.prj as input data. 
 
 # 11. Sensitivity_analysis_
