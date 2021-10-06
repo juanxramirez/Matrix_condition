@@ -10,7 +10,7 @@ Creates a table showing IUCN Red List categories over time. Requires list_of_spe
 # 2. Retrospective_adjustments_and_genuine_changes.py
 Creates a table showing IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires historical_assessemtents.xlsx (output from 1. Historical_assessents_Red_List_IUCN_categories.R) and list_sp_with_genuine_changes.xlsx as input data.
 
-# 3. Classify_extinction_risk_transitions.py
+# 3. Classifying_extinction_risk_transitions.py
 Creates a table showing extinction risk transitions based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires transposed_and_filtered_with_genuine_changes.xlsx (output from 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py) as input data. 
 
 # 4. High_HFP_extent_suitable_unsuitable.py
