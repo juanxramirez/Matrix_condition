@@ -7,7 +7,7 @@ Here, we quantify the relationship between changes in the extinction risk of 4,4
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table showing IUCN Red List categories over time. Requires list_of_species_with_habitat_suitabilty_defined.txt as input data. 
 
-# 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py
+# 2. Transpose_and_filter_historical_assessments_genuine_changes.py
 Creates a table showing IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires historical_assessemtents.xlsx (output from 1. Historical_assessents_Red_List_IUCN_categories.R) and list_sp_with_genuine_changes.xlsx as input data.
 
 # 3. Classify_extinction_risk_transitions.py
