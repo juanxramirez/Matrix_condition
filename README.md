@@ -28,7 +28,7 @@ Runs the Wilcoxon rank sum tests to test for statistical differences in the degr
 # Extract_IUCN_categories.py
 Extracts IUCN categories from a table. Requires transposed_and_filtered_with_genuine_changes.xlsx (output from 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py) as input data.
 
-# Transitions_matrix_of_extinction_risk_categories.R
+# Transition_matrix_of_extinction_risk_categories.R
 Creates a figure to show the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires first_last.txt as input data.
 
 # High_HFP_extent_medium_unsuitable_combined.py
