@@ -9,18 +9,12 @@
 5. [RF_high_medium_first_last.R](#5-rf_high_medium_first_lastr)
 6. [RF_quality_matrix.R](#6-rf_quality_matrixr)
 7. [Wilcox_test_and_cohens_d_quality_matrix.R](#7-wilcox_test_and_cohens_d_quality_matrixr)
-
-   [Extract_IUCN_categories.py](#extract_iucn_categoriespy)
-   
-   [Transition_matrix_of_extinction_risk_categories.R](#transition_matrix_of_extinction_risk_categoriesr)
-   
-   [High_HFP_extent_medium_unsuitable_combined.py](#high_hfp_extent_medium_unsuitable_combinedpy)
-   
-   [RF_medium_unsuitable_first_last.R](#rf_medium_unsuitable_first_lastr)
-   
-   [Sensitivity_testing_importance_plots.R](#sensitivity_testing_importance_plotsr)
-   
-   [Distribution_matrix_condition.R](#distribution_matrix_conditionr)
+[Extract_IUCN_categories.py](#extract_iucn_categoriespy)
+[Transition_matrix_of_extinction_risk_categories.R](#transition_matrix_of_extinction_risk_categoriesr)
+[High_HFP_extent_medium_unsuitable_combined.py](#high_hfp_extent_medium_unsuitable_combinedpy)
+[RF_medium_unsuitable_first_last.R](#rf_medium_unsuitable_first_lastr)
+[Sensitivity_testing_importance_plots.R](#sensitivity_testing_importance_plotsr)
+[Distribution_matrix_condition.R](#distribution_matrix_conditionr)
 
 ## Overview
 Here, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (matrix condition). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals, including the degree of fragmentation, the degree of patch isolation and the matrix condition. In Fig. 3, we show the effect of the degree of habitat fragmentaiton, the degree of patch isolation and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4), including the predictors associated with habitat fragmentation (i.e. the degree of fragemtantion and the degree of patch isolation).
