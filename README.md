@@ -6,7 +6,7 @@ Here, we quantify the relationship between changes in the extinction risk of 4,4
 
 ## Index
 [Overview](#overview)
-1. [Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr)
+[1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr)
 2. [Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
 3. [Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
 4. [High_HFP_extent_suitable_unsuitable.py](#4-high_hfp_extent_suitable_unsuitablepy)
