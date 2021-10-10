@@ -1,10 +1,10 @@
 #Install required packages 
 if(!requireNamespace("rredlist", quietly=TRUE))
   install.packages("rredlist", quiet=TRUE, dependencies=TRUE)  
-if(!requireNamespace("dplyr", quietly = TRUE))
-  install.packages("dplyr", quiet = TRUE, dependencies = TRUE)  
-if(!requireNamespace("writexl", quietly = TRUE))
-  install.packages("writexl", quiet = TRUE, dependencies = TRUE) 
+if(!requireNamespace("dplyr", quietly=TRUE))
+  install.packages("dplyr", quiet=TRUE, dependencies=TRUE)  
+if(!requireNamespace("writexl", quietly=TRUE))
+  install.packages("writexl", quiet=TRUE, dependencies=TRUE) 
   
 library(rredlist)
 library(dplyr)
@@ -14,7 +14,7 @@ library(writexl)
 setwd("/myfolder")
 
 #Call species IDs with a .txt file to get historical assessments per species
-sp.with.esh.map = read.table("/myfolder/list_of_species_with_habitat_suitability_defined.txt", header=TRUE)
+sp.with.esh.map=read.table("/myfolder/list_of_species_with_habitat_suitability_defined.txt", header=TRUE)
 
 a=c(sp.with.esh.map[,1])
 
