@@ -3,31 +3,19 @@
 ## Index
 [Overview](#Overview)
 
-[1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr) 
-
-[2. Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
-
-[3. Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
-
-[4. High_HFP_extent_suitable_unsuitable.py](#4-high_hfp_extent_suitable_unsuitablepy)
-
-[5. RF_high_medium_first_last.R](#5-rf_high_medium_first_lastr)
-
-[6. RF_quality_matrix.R](#6-rf_quality_matrixr)
-
-[7. Wilcox_test_and_cohens_d_quality_matrix.R](#7-wilcox_test_and_cohens_d_quality_matrixr)
-
-[Extract_IUCN_categories.py](#extract_iucn_categoriespy)
-
-[Transition_matrix_of_extinction_risk_categories.R](#transition_matrix_of_extinction_risk_categoriesr)
-
-[High_HFP_extent_medium_unsuitable_combined.py](#high_hfp_extent_medium_unsuitable_combinedpy)
-
-[RF_medium_unsuitable_first_last.R](#rf_medium_unsuitable_first_lastr)
-
-[Sensitivity_testing_importance_plots.R](#sensitivity_testing_importance_plotsr)
-
-[Distribution_matrix_condition.R](#distribution_matrix_conditionr)
+- [1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr) 
+- [2. Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
+- [3. Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
+- [4. High_HFP_extent_suitable_unsuitable.py](#4-high_hfp_extent_suitable_unsuitablepy)
+- [5. RF_high_medium_first_last.R](#5-rf_high_medium_first_lastr)
+- [6. RF_quality_matrix.R](#6-rf_quality_matrixr)
+- [7. Wilcox_test_and_cohens_d_quality_matrix.R](#7-wilcox_test_and_cohens_d_quality_matrixr)
+- [Extract_IUCN_categories.py](#extract_iucn_categoriespy)
+- [Transition_matrix_of_extinction_risk_categories.R](#transition_matrix_of_extinction_risk_categoriesr)
+- [High_HFP_extent_medium_unsuitable_combined.py](#high_hfp_extent_medium_unsuitable_combinedpy)
+- [RF_medium_unsuitable_first_last.R](#rf_medium_unsuitable_first_lastr)
+- [Sensitivity_testing_importance_plots.R](#sensitivity_testing_importance_plotsr)
+- [Distribution_matrix_condition.R](#distribution_matrix_conditionr)
 
 ## Overview
 Here, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (matrix condition). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals, including the degree of fragmentation, the degree of patch isolation and the matrix condition. In Fig. 3, we show the effect of the degree of habitat fragmentaiton, the degree of patch isolation and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4), including the predictors associated with habitat fragmentation (i.e. the degree of fragemtantion and the degree of patch isolation).
@@ -45,7 +33,7 @@ Creates a table with the extinction risk transitions for each species based on r
 Runs the spatial analyses for the quantification of variables when the extent of suitable habitat is represented by high and medium habitat suitability combined and the extent of the matrix by 'unsuitable' habitat alone. The variables derived from spatial analyses include the degree of fragmentation, the degree of patch isolation, the extent of high human footprint values within the matrix, the extent of high human footprint values within suitable habitat, the change in the extent of high human footprint values within the matrix, the change in the extent of high human footprint values within suitable habitat, and the proportion of suitable habitat. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), hfp2000_merisINT_3_or_above.tif, hfp2013_merisINT_3_or_above.tif, and WorldMollweide.prj as input data. 
 
 ## 5. RF_high_medium_first_last.R
-Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined and the extent of the matrix by 'unsuitable' habitat alone. Here we show the relative variable importance of predictors (Fig. 2) and partial dependence plots of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition (Fig. 3) to show the effect of these variables on the predictive probability of extinction risk transitions in terrestrial mammals. Requires data_high_medium_first_last.txt as input data.
+Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined and the extent of the matrix by 'unsuitable' habitat alone. Here, we show the relative variable importance of predictors (Fig. 2), and the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the predictive probability of extinction risk transitions in terrestrial mammals (Fog. 3). Requires data_high_medium_first_last.txt as input data.
 
 ## 6. RF_quality_matrix.R
 Runs separate random forest models for the prediction of extinction risk transitions for species with low-quality matrices and high-quality matrices. Here, we show the relative variable importance in the model for species with low-quility matrices (Fig. 4a) and in the model for species with high-quality matrices (Fig. 4b). Requires data_high_medium_first_last.txt as input data. 
