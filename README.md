@@ -17,22 +17,22 @@
 - [Distribution_matrix_condition.R](#distribution_matrix_conditionr)
 
 ## Overview
-The Matrix_condition repository includes R code, python code, and data to reproduce the analyses shown in the article
+The Matrix_condition repository includes R code, Python code, and data to reproduce the analyses shown in the article:
 
 **The matrix condition mitigates the effects of fragmentation on species extinction risk**
 
 _by Juan Pablo Ramírez-Delgado, Moreno Di Marco, James E. M. Watson, Chris J. Johnson, Carlo Rondinini, Xavier Corredor Llano, Miguel Arias, and Oscar Venter_
 
-In this article, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the matrix condition). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4).
+In this article, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the  condition of the matrix). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4).
 
-All scripts load necessary packages and set up path and working directories. This set up needs to be adjusted for specific users and R/python sessions. 
+All scripts load necessary packages and set up path and working directories. This set up needs to be adjusted for specific users and R/Python sessions. 
 Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript of the article. Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
 
 ## Data availability
-All input data, except the habitat suitability models (which were derived from another study and are available upon request (see https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), are available within each folder of this repository.
+All input data, except the habitat suitability models (derived from another study and available upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), are available within each folder of this repository.
 
 ## R scripts (.R)
-R scripts were tested 
+R scripts can be run in R studio
 
 
 ## Python scripts (.py)
