@@ -17,21 +17,32 @@
 - [Distribution_matrix_condition.R](#distribution_matrix_conditionr)
 
 ## Overview
-Here, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the matrix condition). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals, including the degree of fragmentation, the degree of patch isolation, and the matrix condition. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4), including the predictors associated with fragmentation (i.e. the degree of fragemtantion and the degree of patch isolation). 
+The Matrix_condition repository includes R code, python code, and data to reproduce the analyses shown in the article
+### The matrix condition mitigates the effects of fragmentation on species extinction risk
+by Juan Pablo Ramírez-Delgado, Moreno Di Marco, James E. M. Watson, Chris J. Johnson, Carlo Rondinini, Xavier Corredor Llano, Miguel Arias, and Oscar Venter
+
+Here, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the matrix condition). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals, including the degree of fragmentation, the degree of patch isolation, and the matrix condition. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4), including the predictors associated with fragmentation (i.e. the degree of fragemtantion and the degree of patch isolation).
+
+All scripts load necessary packages and set up path and working directories. This set up needs to be adjusted for specific users and R/python sessions. 
+Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript of the article. Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
 
 ## Data availability
 All input data, except the habitat suitability models (which were derived from another study and are available upon request (see https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), are available within each folder of this repository.
-Scripts from 1 to 7 were used to produce the figures shown in the main manuscript. 
-Other scripts were used to produce the figures shown in the supplementary information.
+
+## R scripts (.R)
+R scripts were tested 
+
+
+## Python scripts (.py)
 
 ## 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires list_of_species_with_habitat_suitabilty_defined.txt as input data.
 
 ## 2. Retrospective_adjustments_and_genuine_changes.py
-Creates a table that shows IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires historical_assessments.xlsx (output from 1. Historical_assessments_Red_List_IUCN_categories.R) and list_sp_with_genuine_changes.xlsx as input data.
+Creates a table showing IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires historical_assessments.xlsx (output from 1. Historical_assessments_Red_List_IUCN_categories.R) and list_sp_with_genuine_changes.xlsx as input data.
 
 ## 3. Classifying_extinction_risk_transitions.py
-Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires transposed_and_filtered_with_genuine_changes.xlsx (output from 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py) as input data. Note: The number of species facing a low-risk transition and those facing a high-risk transition were obtained from here and used to create the Fig. 1 of the main manuscript.
+Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires transposed_and_filtered_with_genuine_changes.xlsx (output from 2. Transpose_and_filter_historical_assessments_with_genuine_changes.py) as input data. Note: The number of species facing a low-risk transition and those facing a high-risk transition were obtained from here and used to create the Fig. 1 of the main manuscript of the article.
 
 ## 4. High_HFP_extent_suitable_unsuitable.py
 Runs the spatial analyses for the quantification of variables (i.e. the degree of fragmentation, the degree of patch isolation, the extent of high human footprint values within the matrix, the extent of high human footprint values within suitable habitat, the change in the extent of high human footprint values within the matrix, the change in the extent of high human footprint values within suitable habitat, and the proportion of suitable habitat) when the extent of suitable habitat is represented by high and medium habitat suitability combined and the extent of the matrix by 'unsuitable' habitat alone. Requieres habitat suitabilty models (available only upon request; see https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), hfp2000_merisINT_3_or_above.tif, hfp2013_merisINT_3_or_above.tif, and WorldMollweide.prj as input data. 
