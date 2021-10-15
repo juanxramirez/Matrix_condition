@@ -28,22 +28,19 @@ In this article, we quantify the relationship between changes in the extinction 
 Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and R/Python sessions. 
 
 Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript. 
-Other scripts can be used to reproduce the figures shown in the supplementary information section of the article.
+Other scripts can be used to reproduce the figures shown in the supplementary information the article.
 
-Input data are available within each folder of this repository, with the exception of the habitat suitability models, which were derived from another study and are available only upon request (https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/).
-
-R scripts (.R) can be run in R studio
-
-Python scripts (.py) can be run
+Input data are available within each folder of this repository, with the exception of the habitat suitability models, which were derived from another study and are available only upon request (see https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/).
 
 # System requirements 
 
 ## Hardware requirements 
-The code presented here requires only a standard computer with enough RAM to support the in-memory operations. equires only a standard computer with enough RAM to support the operations defined by a user.
+The code presented here requires only a standard computer with enough RAM to support the in-memory operations.
 
 ## Software requirements
-users should have R version 3.4.0 or higher, and several packages set up from CRAN.
+To run R scripts (.R), users should have `R` version 4.1.0 or higher.
 
+To run Python scripts, userd should have `Python` version 3.7.10 or higher. 
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
@@ -58,7 +55,7 @@ Creates a table with the transitions of exitnciton risk for each species based o
 Runs the spatial analyses for the quantification of the degree of fragmentation, the degree of patch isolation, the extent of high human footprint values within the matrix, the extent of high human footprint values within suitable habitat, the change in the extent of high human footprint values within the matrix, the change in the extent of high human footprint values within suitable habitat, and the proportion of suitable habitat when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
 
 # 5. RF_high_medium_first_last.R
-Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Here, we show the relative variable importance of predictors (Fig. 2), as well as the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the probability of extinction risk transitions in terrestrial mammals (Fig. 3). Requires `data_high_medium_first_last.txt` as input data.
+Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Here, we show the relative variable importance of predictors (Fig. 2), as well as the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the probability of extinction risk transitions in terrestrial mammals (Fig. 3). Requires `data_high_medium_first_last.txt` as input data. Line can take anywhere from 3 to 5 hours to finish, depending on the speed of the processor.
 
 # 6. RF_quality_matrix.R
 Runs random forest models to predict extinction risk transitions for both species with a low-quality matrix and species with a high-quality matrix. Here, we show the relative variable importance in predicting extinction risk transitions for species with a low-quility matrix (Fig. 4a) and for species with a high-quality matrix (Fig. 4b). Requires `data_high_medium_first_last.txt` as input data. 
