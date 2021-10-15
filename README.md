@@ -40,7 +40,7 @@ The code presented here requires only a standard computer with enough RAM to sup
 ## Software requirements
 To run R scripts (.R), users should have `R` version 4.1.0 or higher.
 
-To run Python scripts, userd should have `Python` version 3.7.10 or higher. 
+To run Python scripts, users should have `Python` version 3.7.10 or higher. 
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
