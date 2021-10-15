@@ -2,6 +2,7 @@
 
 # Index
 - [Overview](#Overview)
+- [System requirements](#System_requirements)
 - [1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr) 
 - [2. Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
 - [3. Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
@@ -28,7 +29,7 @@ In this article, we quantify the relationship between changes in the extinction 
 Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and R/Python sessions. 
 
 Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript. 
-Other scripts can be used to reproduce the figures shown in the supplementary information the article.
+Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
 
 Input data are available within each folder of this repository, with the exception of the habitat suitability models, which were derived from another study and are available only upon request (see https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/).
 
@@ -38,9 +39,11 @@ Input data are available within each folder of this repository, with the excepti
 The code presented here requires only a standard computer with enough RAM to support the in-memory operations.
 
 ## Software requirements
-To run R scripts (.R), users should have `R` version 4.1.0 or higher.
+To run R scripts (.R), users should have `R` version 4.1.0 or higher. 
 
 To run Python scripts, users should have `Python` version 3.7.10 or higher. 
+
+The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require ArcGIS Pro 2.8.2 or higher and the Spatial Analysis license to run.
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
@@ -64,7 +67,7 @@ Runs random forest models to predict extinction risk transitions for both specie
 Runs the Wilcoxon rank sum tests used to test for statistical differences in the degree of fragmentation and the degree of patch isolation between low-risk and high-risk species with a low-quality matrix and a high-quality matrix. It also calculates effect sizes (based on Cohen's d statistic) to determine the effect size of the degree of fragmentation and the degree of patch isolation between low-risk and high-risk species with a low-quality matrix and a high-quality matrix (Supplementary Fig. 5). Requires `data_high_medium_first_last.txt' as input data.
 
 # Extract_IUCN_categories.py
-Extracts IUCN categories from an existing table. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data.
+Extracts the first and last IUCN Red List category for each species and creates a table with these categories from an existing table. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data.
 
 # Transition_matrix_of_extinction_risk_categories.R
 Shows the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires `first_last.txt` as input data (derived from the output of `Extract_IUCN_categories.py`).
