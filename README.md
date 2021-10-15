@@ -27,8 +27,8 @@ In this article, we quantify the relationship between changes in the extinction 
 
 Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and R/Python sessions. 
 
-Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript of the article. 
-Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
+Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript. 
+Other scripts can be used to reproduce the figures shown in the supplementary information section of the article.
 
 Input data are available within each folder of this repository, with the exception of the habitat suitability models, which were derived from another study and are available only upon request (https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/).
 
@@ -42,7 +42,7 @@ Python scripts (.py) can be run
 The code presented here requires only a standard computer with enough RAM to support the in-memory operations. equires only a standard computer with enough RAM to support the operations defined by a user.
 
 ## Software requirements
-
+users should have R version 3.4.0 or higher, and several packages set up from CRAN.
 
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
