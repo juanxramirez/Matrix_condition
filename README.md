@@ -37,7 +37,8 @@ Input data are available within each folder of this repository, with the excepti
 
 ## Hardware requirements 
 The code presented here requires only a standard computer with enough RAM to support the in-memory operations. 
-We tested our code using a desktop PC with 3.6 GHz CPU and 16 GB of RAM.
+
+We have tested our code using a desktop PC with 3.6 GHz CPU and 16 GB of RAM.
 
 ## Software requirements
 ### OS Requirements
