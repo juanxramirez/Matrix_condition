@@ -45,7 +45,7 @@ We have tested our code using a desktop PC with 3.6 GHz CPU and 16 GB of RAM.
 
 Our code is supported for _Windows_ and has been tested on the following system:
 
-Windows 10 Enterprise version 20H2
+- Windows 10 Enterprise version 20H2
 
 Users should have `R` version 4.1.0 or higher to run `R` scripts (.R), and `Python` version 3.7.10 or higher to run `Python` scripts (.py) 
 
