@@ -2,7 +2,7 @@
 
 # Index
 - [Overview](#Overview)
-- [System requirements](#System)
+- [System requirements](#System_requirements)
 - [1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr) 
 - [2. Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
 - [3. Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
@@ -26,7 +26,7 @@ _by Juan Pablo Ramírez-Delgado, Moreno Di Marco, James E. M. Watson, Chris J. J
 
 In this article, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the  condition of the matrix). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4).
 
-Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and R/Python sessions. 
+Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and R or Python sessions. 
 
 Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript. 
 Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
@@ -36,14 +36,12 @@ Input data are available within each folder of this repository, with the excepti
 # System requirements 
 
 ## Hardware requirements 
-The code presented here requires only a standard computer with enough RAM to support the in-memory operations.
+The code presented here requires only a standard computer with enough RAM to support the in-memory operations. All the scripts presented here have been tested on _Windows_ operating system.
 
 ## Software requirements
-To run R scripts (.R), users should have `R` version 4.1.0 or higher. 
+Users should have `R` version 4.1.0 or higher to run `R` scripts (.R), and `Python` version 3.7.10 or higher to run `Python` scripts (.py) 
 
-To run Python scripts, users should have `Python` version 3.7.10 or higher. 
-
-The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require ArcGIS Pro 2.8.2 or higher and the Spatial Analysis license to run.
+The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require `ArcGIS Pro` version 2.8.2 or higher and the `Spatial Analysis` license to run.
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
