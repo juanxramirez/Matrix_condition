@@ -49,7 +49,7 @@ Users should have `R` version 4.1.0 or higher to run `R` scripts (.R), and `Pyth
 
 The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require `ArcGIS Pro` version 2.8.2 or higher and the `Spatial Analyst` license to run.
 
-R scripts have been tested on RStudio version 1.4.1717 and python sripts on Spyder version 4.1.5.
+`R` scripts have been tested on `RStudio` version 1.4.1717 and `Python` sripts on `Spyder` version 4.1.5.
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
