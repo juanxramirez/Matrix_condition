@@ -36,12 +36,20 @@ Input data are available within each folder of this repository, with the excepti
 # System requirements 
 
 ## Hardware requirements 
-The code presented here requires only a standard computer with enough RAM to support the in-memory operations. All the scripts presented here have been tested on _Windows_ operating system.
+The code presented here requires only a standard computer with enough RAM to support the in-memory operations.
 
 ## Software requirements
+### OS Requirements
+
+The code presented here is supported for _Windows_ and has been tested on the following system:
+
+Windows 10 Enterprise version 20H2
+
 Users should have `R` version 4.1.0 or higher to run `R` scripts (.R), and `Python` version 3.7.10 or higher to run `Python` scripts (.py) 
 
-The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require `ArcGIS Pro` version 2.8.2 or higher and the `Spatial Analysis` license to run.
+The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require `ArcGIS Pro` version 2.8.2 or higher and the `Spatial Analyst` license to run.
+
+R scripts have been tested on RStudio version 1.4.1717 and python sripts on Spyder version 4.1.5.
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
@@ -50,7 +58,7 @@ Creates a table with the IUCN Red List categories over time. Requires `list_of_s
 Creates a table showing IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires `historical_assessments.xlsx` (output from `1. Historical_assessments_Red_List_IUCN_categories.R`) and `list_sp_with_genuine_changes.xlsx` as input data.
 
 # 3. Classifying_extinction_risk_transitions.py
-Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data. Note: The number of species facing a low-risk transition and those facing a high-risk transition were obtained from here, which was included in the Fig. 1 of the article.
+Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data. Note that the number of species facing a low-risk transition and those facing a high-risk transition were obtained from here, which were included in the Fig. 1 of the article.
 
 # 4. High_HFP_extent_suitable_unsuitable.py
 Runs the spatial analyses for the quantification of the degree of fragmentation, the degree of patch isolation, the extent of high human footprint values within the matrix, the extent of high human footprint values within suitable habitat, the change in the extent of high human footprint values within the matrix, the change in the extent of high human footprint values within suitable habitat, and the proportion of suitable habitat when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
