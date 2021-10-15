@@ -36,7 +36,8 @@ Input data are available within each folder of this repository, with the excepti
 # System requirements 
 
 ## Hardware requirements 
-The code presented here requires only a standard computer with enough RAM to support the in-memory operations.
+The code presented here requires only a standard computer with enough RAM to support the in-memory operations. 
+We tested our code using a desktop PC with 3.6 GHz CPU and 16 GB of RAM.
 
 ## Software requirements
 ### OS Requirements
@@ -49,7 +50,7 @@ Users should have `R` version 4.1.0 or higher to run `R` scripts (.R), and `Pyth
 
 The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_medium_unsuitable_combined.py` require `ArcGIS Pro` version 2.8.2 or higher and the `Spatial Analyst` license to run.
 
-`R` scripts have been tested on `RStudio` version 1.4.1717 and `Python` sripts on `Spyder` version 4.1.5.
+`R` scripts have been tested on `RStudio` version 1.4.1717 and `Python` scripts on `Spyder` version 4.1.5.
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
