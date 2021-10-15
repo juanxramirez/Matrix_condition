@@ -41,7 +41,7 @@ The code presented here requires only a standard computer with enough RAM to sup
 ## Software requirements
 ### OS Requirements
 
-The code presented here is supported for _Windows_ and has been tested on the following system:
+Our code is supported for _Windows_ and has been tested on the following system:
 
 Windows 10 Enterprise version 20H2
 
