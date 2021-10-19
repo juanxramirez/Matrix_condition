@@ -294,11 +294,10 @@ pdp.matrix.condition.high.risk<-ggplot(effect.matrix.condition.high.risk, aes(x=
   scale_color_manual(values=c("#FB8072"))
 pdp.matrix.condition.high.risk
 
-#png("pdp.png", units="in", width=8, height=5, res=1200, type="cairo")
-ggarrange(pdp.degree.fragmentation.low.risk, pdp.degree.patch.isolation.low.risk, pdp.matrix.condition.low.risk,
-          pdp.degree.fragmentation.high.risk, pdp.degree.patch.isolation.high.risk, pdp.matrix.condition.high.risk,
-          labels=c("a", "b", "c", "d", "e", "f"),
-          ncol=3, nrow=2,
+#png("pdp.png", units="in", width=8, height=2.8, res=1200, type="cairo")
+ggarrange(pdp.degree.fragmentation.high.risk, pdp.degree.patch.isolation.high.risk, pdp.matrix.condition.high.risk,
+          labels=c("a", "b", "c"),
+          ncol=3, nrow=1,
           common.legend=FALSE, legend="none", align="hv",
           font.label=list(size=7))
 #dev.off()
