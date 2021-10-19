@@ -58,12 +58,19 @@ The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_med
 There are 8 data files in the data folder:
 
 `list_of_species_with_habitat_suitabilty_defined.txt`: This file contains the ID of the species with a defined level of habitat suitability.
+
 `list_sp_with_genuine_changes.xlsx`: This file contains the list of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
+
 `hfp2000_merisINT_3_or_above.tif`: 
+
 `hfp2013_merisINT_3_or_above.tif`:
+
 `WorldMollweide.prj`:
+
 `data_high_medium_first_last.txt`:
+
 `first_last.txt`:
+
 `data_medium_unsuitable_first_last.txt`:
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
