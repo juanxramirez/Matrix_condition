@@ -3,6 +3,7 @@
 # Index
 - [Overview](#Overview)
 - [System requirements](#System-requirements)
+- [Data](#Data)
 - [1. Historical_assessments_Red_List_IUCN_categories.R](#1-historical_assessments_red_list_iucn_categoriesr) 
 - [2. Retrospective_adjustments_and_genuine_changes.py](#2-retrospective_adjustments_and_genuine_changespy)
 - [3. Classifying_extinction_risk_transitions.py](#3-classifying_extinction_risk_transitionspy)
@@ -53,6 +54,18 @@ The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_med
 
 `R` scripts have been tested on `RStudio` version 1.4.1717, and `Python` scripts on `Spyder` version 4.1.5.
 
+# Data
+There are 8 data files in the data folder:
+
+`list_of_species_with_habitat_suitabilty_defined.txt`: This file contains the ID of the species with a defined level of habitat suitability.
+`list_sp_with_genuine_changes.xlsx`: This file contains the list of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
+`hfp2000_merisINT_3_or_above.tif`: 
+`hfp2013_merisINT_3_or_above.tif`:
+`WorldMollweide.prj`:
+`data_high_medium_first_last.txt`:
+`first_last.txt`:
+`data_medium_unsuitable_first_last.txt`:
+
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
 
@@ -60,13 +73,13 @@ Creates a table with the IUCN Red List categories over time. Requires `list_of_s
 Creates a table showing IUCN Red List categories over time based on retrospective adjustments and genuine changes. Requires `historical_assessments.xlsx` (output from `1. Historical_assessments_Red_List_IUCN_categories.R`) and `list_sp_with_genuine_changes.xlsx` as input data.
 
 # 3. Classifying_extinction_risk_transitions.py
-Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data. Note that the number of species facing a low-risk transition and those facing a high-risk transition were obtained from here, which were included in the Fig. 1 of the article.
+Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data. Note that the number of species facing a low-risk transition and those facing a high-risk transition were obtained from here. This was included in the Fig. 1 of the article.
 
 # 4. High_HFP_extent_suitable_unsuitable.py
-Runs the spatial analyses for the quantification of the following variables: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within suitable habitat; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within suitable habitat over time (between 2000 and 2013); and the proportion of suitable habitat. This is when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
+Runs the spatial analyses for the quantification of the following variables: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within suitable habitat; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within suitable habitat over time (between 2000 and 2013); and (vii) the proportion of suitable habitat. This is when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
 
 # 5. RF_high_medium_first_last.R
-Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Here, we show the relative variable importance of predictors (Fig. 2), as well as the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the probability of extinction risk transitions in terrestrial mammals (Fig. 3). Requires `data_high_medium_first_last.txt` as input data. Note that the Line 84 of this script can take anywhere from 3 to 6 hours to finish, depending on the speed of the processor.
+Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Here, we show the relative variable importance of predictors (Fig. 2), as well as the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the probability of extinction risk transitions in terrestrial mammals (Fig. 3). Requires `data_high_medium_first_last.txt` as input data. Note that the Line 84 of this script can take anywhere from 3 to 6 hours to finish, depending on the processor speed of the user.
 
 # 6. RF_quality_matrix.R
 Runs random forest models to predict extinction risk transitions for both species with a low-quality matrix and species with a high-quality matrix. Here, we show the relative variable importance in predicting extinction risk transitions for species with a low-quility matrix (Fig. 4a) and for species with a high-quality matrix (Fig. 4b). Requires `data_high_medium_first_last.txt` as input data. 
@@ -81,10 +94,10 @@ Extracts the first and last IUCN Red List category for each species and creates 
 Shows the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires `first_last.txt` as input data (derived from the output of `Extract_IUCN_categories.py`).
 
 # High_HFP_extent_medium_unsuitable_combined.py
-Runs the spatial analyses for the quantification of the following varaibles: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within high habitat suitability; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within high habitat suitability over time (between 2000 and 2013); and the proportion of high habitat suitability. This is when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
+Runs the spatial analyses for the quantification of the following varaibles: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within high habitat suitability; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within high habitat suitability over time (between 2000 and 2013); and (vii) the proportion of high habitat suitability. This is when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
 
 # RF_medium_unsuitable_first_last.R
-Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requires `data_medium_unsuitable_first_last.txt` as input data. Note that the Line 84 of this script can take anywhere from 3 to 6 hours to finish, depending on the speed of the processor.
+Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requires `data_medium_unsuitable_first_last.txt` as input data. Note that the Line 84 of this script can take anywhere from 3 to 6 hours to finish, depending on the processor speed of the user.
 
 # Sensitivity_testing_importance_plots.R
 Shows the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals when the extent of suitable habitat is represented by high and medium suitability combined, and the extent of the matrix by unsuitable habitat alone (Supplementary Fig. 2a). It also shows the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined (Supplementary Fig. 2b). Requires `Relative_importance_scores_high_medium_first_last.csv` (output from  5. `RF_high_medium_first_last.R`) and `Relative_importance_scores_medium_unsuitable_first_last.csv` (output from `11. RF_medium_unsuitable_first_last.R`).
