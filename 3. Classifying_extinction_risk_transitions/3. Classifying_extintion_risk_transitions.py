@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jul  5 10:01:45 2019
-
-@author: delgado
-"""
-
 #conda install pip
 
 #pip install pandas 
