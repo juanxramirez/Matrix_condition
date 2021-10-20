@@ -21,7 +21,7 @@ a=c(sp.with.esh.map[,1])
 #Get historical assessments by species ID
 list=list()
 for (i in 1:length(a)){
-  b=rl_history(id=a[i], key="#API key#", parse=TRUE) #Requires  you  to  get  your  own  API  key,  an  alphanumeric  string  that  you  need  to  send  in every request. Please see https://apiv3.iucnredlist.org/ for more details
+  b=rl_history(id=a[i], key="YOUR API KEY", parse=TRUE) #Requires  you  to  get  your  own  API  key,  an  alphanumeric  string  that  you  need  to  send  in every request. Please see https://apiv3.iucnredlist.org/ for more details
   sp_result=b$result
   sp_result$sp_name=b$name 
   list[[i]]=sp_result
