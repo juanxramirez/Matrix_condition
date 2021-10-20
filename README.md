@@ -57,21 +57,21 @@ The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_med
 # Data
 There are 8 data files in the data folder:
 
-`list_of_species_with_habitat_suitabilty_defined.txt`: This file contains the ID of the species with a defined level of habitat suitability.
+`list_of_species_with_habitat_suitabilty_defined.txt`: This file contains the species' taxon ID of those species with a defined level of habitat suitability.
 
 `list_sp_with_genuine_changes.xlsx`: This file contains the list of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
 
-`hfp2000_merisINT_3_or_above.tif`: 
+`hfp2000_merisINT_3_or_above.tif`: Spatially explicit layer with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2000. 
 
-`hfp2013_merisINT_3_or_above.tif`:
+`hfp2013_merisINT_3_or_above.tif`: Spatially explicit layer with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2013.
 
-`WorldMollweide.prj`:
+`WorldMollweide.prj`: This file cotains the Spatial Reference used in our spatial analyses.
 
-`data_high_medium_first_last.txt`:
+`data_high_medium_first_last.txt`: This file contains the data used to run our models of extinction risk when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone.
 
-`first_last.txt`:
+`first_last.txt`: This file contains the data required to show the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1).
 
-`data_medium_unsuitable_first_last.txt`:
+`data_medium_unsuitable_first_last.txt`: This file contains the data used to run our models of extinction risk twhen the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. 
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data.
