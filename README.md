@@ -21,7 +21,7 @@
 # Overview
 The Matrix_condition repository includes R code, Python code, and data to reproduce the analyses shown in the article:
 
-**The matrix condition mediates the effects of fragmentation on species extinction risk**
+**Matrix condition mediates the effects of habitat fragmentation on species extinction risk**
 
 _by Juan Pablo Ramírez-Delgado, Moreno Di Marco, James E. M. Watson, Chris J. Johnson, Carlo Rondinini, Xavier Corredor Llano, Miguel Arias, and Oscar Venter_
 
