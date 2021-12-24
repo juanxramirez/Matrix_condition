@@ -1,6 +1,7 @@
 # Matrix_condition
-.. image:: https://zenodo.org/badge/394084139.svg
-   :target: https://zenodo.org/badge/latestdoi/394084139
+
+[![DOI](https://zenodo.org/badge/394084139.svg)](https://zenodo.org/badge/latestdoi/394084139)
+
 # Index
 - [Overview](#Overview)
 - [System requirements](#System-requirements)
