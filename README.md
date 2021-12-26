@@ -1,6 +1,6 @@
 # Matrix_condition
 
-[![DOI](https://zenodo.org/badge/394084139.svg)](https://zenodo.org/badge/latestdoi/394084139)
+<a href="https://doi.org/10.5281/zenodo.5803377"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5803377.svg" alt="DOI"></a>
 
 # Index
 - [Overview](#Overview)
