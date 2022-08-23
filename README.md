@@ -29,7 +29,7 @@ _by J.P. Ramírez-Delgado, M. Di Marco, J.E.M. Watson, C.J. Johnson, C. Rondinin
 
 In this article, we quantify the relationship between changes in the extinction risk of 4,426 terrestrial mammals over a 24-year period (1996-2020), the fragmentation of their suitable habitat (in terms of the degree of fragmentation and the degree of patch isolation), and the levels of human pressure within the associated habitat matrix (i.e. the  condition of the matrix). In Fig. 1, we show how we classified extinction risk transitions based on past and present IUCN Red List categories. In Fig. 2, we show the relative importance of selected variables for the prediction of extinction risk transitions in terrestrial mammals. In Fig. 3, we show the effect of the degree of fragmentaiton, the degree of patch isolation, and the matrix condition on extinction risk transitions in terrestrial mammals. Finally, we show the influence of low-quality matrices and high-quality matrices on the relative importance of selected predictors of extinction risk transitions in terrestrial mammals (Fig. 4).
 
-Each script loads necessary packages and sets up path and working directories. This set up needs to be adjusted for specific users and `R` or `Python` sessions. 
+Each script loads necessary packages and sets up path and working directories. The set up of each script needs to be adjusted for specific users and `R` or `Python` sessions. 
 
 Scripts from 1 to 7 can be used to reproduce the figures shown in the main manuscript. 
 Other scripts can be used to reproduce the figures shown in the supplementary information of the article.
@@ -38,12 +38,12 @@ Input data are available within each folder of this repository, with the excepti
 
 # System requirements 
 
-## Hardware requirements 
+## Hardware
 The code presented here requires only a standard computer with enough RAM to support the in-memory operations. 
 
 We have tested our code using a desktop PC with 3.6 GHz CPU and 16 GB of RAM.
 
-## Software requirements
+## Software
 ### OS Requirements
 
 Our code is supported for _Windows_ and has been tested on the following system:
@@ -59,21 +59,21 @@ The scripts `4. High_HFP_extent_suitable_unsuitable.py` and `High_HFP_extent_med
 # Data
 There are 8 data files in the data folder:
 
-`list_of_species_with_habitat_suitabilty_defined.txt`: This file contains the species' taxon ID of those species with a defined level of habitat suitability.
+`list_of_species_with_habitat_suitabilty_defined.txt`: Species' taxon ID of those species with a defined level of habitat suitability.
 
-`list_sp_with_genuine_changes.xlsx`: This file contains the list of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
+`list_sp_with_genuine_changes.xlsx`: List of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
 
-`hfp2000_merisINT_3_or_above.tif`: Spatially explicit layer with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2000. 
+`hfp2000_merisINT_3_or_above.tif`: Raster with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2000. 
 
-`hfp2013_merisINT_3_or_above.tif`: Spatially explicit layer with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2013.
+`hfp2013_merisINT_3_or_above.tif`: Raster with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2013.
 
-`WorldMollweide.prj`: This file cotains the Spatial Reference used in our spatial analyses.
+`WorldMollweide.prj`: Spatial reference used in our spatial analyses.
 
-`data_high_medium_first_last.txt`: This file contains the data used to run our models of extinction risk when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone.
+`data_high_medium_first_last.txt`: Data used to run our models of extinction risk when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone.
 
-`first_last.txt`: This file contains the data required to show the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1).
+`first_last.txt`: Data required to show the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1).
 
-`data_medium_unsuitable_first_last.txt`: This file contains the data used to run our models of extinction risk twhen the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. 
+`data_medium_unsuitable_first_last.txt`: Data used to run our models of extinction risk when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. 
 
 # 1. Historical_assessments_Red_List_IUCN_categories.R
 Creates a table with the IUCN Red List categories over time. Requires `list_of_species_with_habitat_suitabilty_defined.txt` as input data. Line 23-28 can take anywhere from 30 min to 1 hour to finish, depending on the processor speed of the user.
@@ -85,7 +85,7 @@ Creates a table showing IUCN Red List categories over time based on retrospectiv
 Creates a table with the transitions of exitnciton risk for each species based on retrospective adjustments and genuine changes in the IUCN Red List categories over time. Requires `transposed_and_filtered_with_genuine_changes.xlsx` (output from `2. Transpose_and_filter_historical_assessments_with_genuine_changes.py`) as input data. Note that the number of species facing a low-risk transition and those facing a high-risk transition were obtained from here. This was included in the Fig. 1 of the article.
 
 # 4. High_HFP_extent_suitable_unsuitable.py
-Runs the spatial analyses for the quantification of the following variables: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within suitable habitat; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within suitable habitat over time (between 2000 and 2013); and (vii) the proportion of suitable habitat. This is when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
+Runs the spatial analyses for the quantification of the following variables: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within suitable habitat; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within suitable habitat over time (between 2000 and 2013); and (vii) the proportion of suitable habitat. This script should be used when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
 
 # 5. RF_high_medium_first_last.R
 Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high and medium habitat suitability combined, and the extent of the matrix by unsuitable habitat alone. Here, we show the relative importance of selected variables for the prediction of extinction risk transitions in terestrial mammals  (Fig. 2), as well as the effect of the degree of habitat fragmentation, the degree of patch isolation, and the matrix condition on the probability of extinction risk transitions in terrestrial mammals (Fig. 3). Requires `data_high_medium_first_last.txt` as input data. Line 84 can take anywhere from 3 to 6 hours to finish, depending on the processor speed of the user.
@@ -103,7 +103,7 @@ Extracts the first and last IUCN Red List category for each species and creates 
 Shows the transition matrix of the first and last Red List category reported between 1996 and 2020 (Supplementary Fig. 1). Requires `first_last.txt` as input data (derived from the output of `Extract_IUCN_categories.py`).
 
 # High_HFP_extent_medium_unsuitable_combined.py
-Runs the spatial analyses for the quantification of the following varaibles: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within high habitat suitability; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within high habitat suitability over time (between 2000 and 2013); and (vii) the proportion of high habitat suitability. This is when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
+Runs the spatial analyses for the quantification of the following varaibles: (i) the degree of habitat fragmentation; (ii) the degree of patch isolation; (iii) the extent of high human footprint values within the matrix; (iv) the extent of high human footprint values within high habitat suitability; (v) the change in the extent of high human footprint values within the matrix over time (between 2000 and 2013); (vi) the change in the extent of high human footprint values within high habitat suitability over time (between 2000 and 2013); and (vii) the proportion of high habitat suitability. This script should be used when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requieres habitat suitabilty models (available only upon request; https://globalmammal.org/habitat-suitability-models-for-terrestrial-mammals/), `hfp2000_merisINT_3_or_above.tif`, `hfp2013_merisINT_3_or_above.tif`, and `WorldMollweide.prj` as input data. 
 
 # RF_medium_unsuitable_first_last.R
 Runs a random forest model for the prediction of extinction risk transtions in terrestrial mammals when the extent of suitable habitat is represented by high habitat suitability, and the extent of the matrix by medium habitat suitability and unsuitable habitat combined. Requires `data_medium_unsuitable_first_last.txt` as input data. Line 78 can take anywhere from 3 to 6 hours to finish, depending on the processor speed of the user.
