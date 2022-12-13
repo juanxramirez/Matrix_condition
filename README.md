@@ -61,7 +61,7 @@ There are 8 data files in the data folder:
 
 `list_of_species_with_habitat_suitabilty_defined.txt`: Species' taxon ID of those species with a defined level of habitat suitability.
 
-`list_sp_with_genuine_changes.xlsx`: List of species that showed a genuine change in their IUCN Red List category between 1996 and 2000.
+`list_sp_with_genuine_changes.xlsx`: List of species that showed a genuine change in their IUCN Red List category between 1996 and 2020.
 
 `hfp2000_merisINT_3_or_above.tif`: Raster with the areas of high human pressure levels (i.e. human footprint values of 3 or above) for the year 2000. 
 
